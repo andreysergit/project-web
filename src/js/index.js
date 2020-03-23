@@ -33,7 +33,7 @@
 // }
 
 // for (i=2; i<=10; i++){
-//   if (i%2 == 1) continue;
+//   if (i%2 === 1) continue;
 //   console.log (i);
 // }
 
@@ -92,17 +92,12 @@
 // Напишите условие if для проверки, что переменная age находится в диапазоне между 14 и 90 включительно.
 // «Включительно» означает, что значение переменной age может быть равно 14 или 90.
 
-// let age = [14-19];
-//  if (14<=age<=90){
+// let age = 20;
+// if (age > 14 && age <= 90) {
 //   console.log(true);
-//  }
+// } else console.log(false);
 
 // ----------------------------------------
-
-// let age = [14-19];
-//  if (14<=age<=90){
-//   console.log(!true);
-//  }
 
 // -----------------------------------------------
 
@@ -132,58 +127,79 @@
 // Task
 // Implement function, that for given two numbers, presented as strings will return their product ----------
 
-const str1 = '2', str2 = '2';
-num1 = Number.parseInt(str1);
-num2 = Number.parseInt(str2);
-console.log(num1 * num2);
+// const str1 = '2', str2 = '2';
+// num1 = Number.parseInt(str1);
+// num2 = Number.parseInt(str2);
+// console.log(num1 * num2);
 
 // Задаем 2 числа, начало и конец диапазона. Программа выдаёт сумму всех нечетных чисел в этом диапазоне.-------------
 
 // first way---
-
-for (let num = 10; num < 30; ++num) {
-  if (num % 2 == 0) continue;
-  console.log(num);
-}
+// function sumNumber(x) {
+//   let sum = 0;
+//   for (let num = 10; num <= x; ++num) {
+//     if (num % 2 === 0) continue;
+//     sum += num;
+//   }
+//   return sum;
+// }
+// console.log(sumNumber(30)); // Выводим сумму всех нечетных числе в диапазоне
 
 // second way---
 
-let num = 10;
-while (num < 30) {
-  ++num;
-  if (num % 2 == 0) continue;
-  console.log(num);
-}
+// let num = 10;
+// while (num < 30) {
+//   ++num;
+//   if (num % 2 == 0) continue;
+//   console.log(num);
+// }
 
 // -----------------------------------------------------------------
 
 // Найти факториал числа. Для числа 5 результат должен быть равен 120, потому что факториал 5 это 5*4*3*2*1
 
-function factorialNumber(n) {
-  return (n != 1) ? n * factorialNumber(n - 1) : 1;
-}
-console.log(factorialNumber(5));
+// function factorialNumber(n) {
+//   return (n != 1) ? n * factorialNumber(n - 1) : 1;
+// }
+// console.log(factorialNumber(5));
 
 // --------------------------------------------------------------------
 
 // Найти последовательность Хэеса, для числа должно быть выдано сообщение,
-//  с самой последовательностью, количеством шагов, которое понадобилось для нахождения этой последовательности, 
-//  и вершиной последовательности, это максимальное число из этой последовательности. 
+//  с самой последовательностью, количеством шагов, которое понадобилось для нахождения этой последовательности,
+//  и вершиной последовательности, это максимальное число из этой последовательности.
 // Последовательность Хэеса считается так: если ввели число 9, то проверяем его, если оно чётное, делим на 2,
 //  если нечетное, умножаем на 3 и прибавляем 1, и так до тех пор пока число не будет равно 1.
 
-function getArray(number) {
-  let count = -1;
-  let arr = [];
-  let maxNumber = number;
-  getMax(number);
-  function getMax(number) {
-    count++;
-    arr.push(number);
-    if (number > maxNumber) maxNumber = number;
-    if (number === 1) return 1;
-    return number % 2 === 0 ? getMax(number / 2) : getMax(number * 3 + 1);
+// function getArray(number) {
+//   let count = -1;
+//   let arr = [];
+//   let maxNumber = number;
+//   getMax(number);
+//   function getMax(number) {
+//     count++;
+//     arr.push(number);
+//     if (number > maxNumber) maxNumber = number;
+//     if (number === 1) return 1;
+//     return number % 2 === 0 ? getMax(number / 2) : getMax(number * 3 + 1);
+//   }
+//   console.log(count, arr, maxNumber);
+// }
+// getArray(9);
+
+function zeros(expression){
+  let number = '';
+  let symbol;
+  for (let i = 0 ; i<expression.lenght; i++){
+    switch (symbol){
+      case '*'
+      number = '';
+      break;
+      case = '!'
+      if (expression [i+1===!){
+        
+      }
+    }
   }
-  console.log(count, arr, maxNumber);
 }
-getArray(9);
+
