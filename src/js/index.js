@@ -177,7 +177,7 @@
 //   let maxNumber = number;
 //   getMax(number);
 //   function getMax(number) {
-//     count++;
+//     count++
 //     arr.push(number);
 //     if (number > maxNumber) maxNumber = number;
 //     if (number === 1) return 1;
@@ -187,19 +187,148 @@
 // }
 // getArray(9);
 
-function zeros(expression){
-  let number = '';
-  let symbol;
-  for (let i = 0 ; i<expression.lenght; i++){
-    switch (symbol){
-      case '*'
-      number = '';
-      break;
-      case = '!'
-      if (expression [i+1===!){
-        
-      }
-    }
-  }
-}
+// function zeros(expression){
+//   let number = '';
+//   let symbol;
+//   for (let i = 0 ; i<expression.lenght; i++){
+//     switch (symbol){
+//       case '*'
+//       number = '';
+//       break;
+//       case = '!'
+//       if (expression [i+1===!){
+
+//       }
+//     }
+//   }
+// }
+
+// let user = {
+//   name: "John",
+//   surname: "Smith"
+// };
+// user.name = "Pete";
+// delete user.name;
+// console.log(user);
+
+// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+// Если объект salaries пуст, то результат должен быть 0.
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// };
+
+// let sum = 0;
+// for (key in salaries) {
+//   sum += salaries[key];
+// }
+// console.log(sum);
+
+// -------------------------------------------
+
+// Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+// let obj = {
+//   width: 100,
+//   height: 200,
+//   title: "My menu"
+// };
+
+//   let number=0;
+//   for (key in obj) {
+//     if (typeof obj[key]==='number'){
+//       number = 2 * obj[key]
+//   }else (number = obj[key])
+//   console.log(number);
+// }
+
+//------------------------------------Массивы----------------------------------------
+
+// let arr = [4, 7, 11, 44];
+//  for( let num of arr){
+//    if (num>7)
+//    console.log(num);
+//  };
+
+// let arr = [{ one: 4 }, { two: 11 }, { forest: 22 }];
+
+// for (let num of arr) {
+//   for (name in num) {
+//     if (num[name] > 7) console.log(name)
+//   }
+// }
+
+// let data = [
+//     {
+//     firstName: 'Ashton',
+//     lastName: 'Kutcher',
+//     age: 40
+//     }, {
+//     firstName: 'Bradley',
+//     lastName: 'Pitt',
+//     age: 54
+//     }, {
+//     firstName: 'Hannah',
+//     lastName: 'Dakota',
+//     age: 24
+//     }
+//     ];
+
+// let inpName = prompt ('Введите фамилию пользователя' , 'Ashton');
+// for (let inpName  in data) {
+//     if (inpName ===data.firstname) {
+//         alert (data[key])
+//     } else alert( 'No results found for your request')
+// }
+
+// let num = 'Hello'
+// function show (num2) {
+//   console.log('hi', num2);
+// }
+// show(num)
+
+// let x;
+// function show (x) {
+//   console.log(x);
+//   return x;
+// }
+// show(5)
+
+// function getArray(number) {
+//   let count = 0;
+//   let arr = [];
+//   let maxNumber = number;
+
+//  ( function getMax(number) {
+//     arr.push(number);
+//     if (number > maxNumber) maxNumber = number;
+//     if (number === 1) return 1;
+//     count++;
+//     return number % 2 === 0 ? getMax(number / 2) : getMax(number * 3 + 1);
+//   })(number)
+//   console.log(count, arr, maxNumber);
+// }
+// getArray(9);
+
+// function random() {
+//   console.log(Math.random())
+//  let a = Math.random() * 10;
+//   console.log(a)
+
+// };
+// random();
+
+
+// let arr = [];
+// function getRandom(arr) {
+//   let array = [];
+//   for (let i = 0; i < 10; i++) {
+//     let random = Math.round(Math.random() * 10);
+//     array.push(random);
+//   }
+//   console.log(array)
+// }
+// getRandom(arr)
 
