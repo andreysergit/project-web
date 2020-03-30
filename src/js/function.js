@@ -20,6 +20,14 @@
 // let result3 = minNumber(1, 1);
 // console.log(result1, result2, result3);
 
+// function minNumber(a, b) {
+//   return a < b ? a : b;
+// }
+// let result1 = minNumber(2, 5);
+// let result2 = minNumber(3, -1);
+// let result3 = minNumber(1, 1);
+// console.log(result1, result2, result3);
+
 // Напишите функцию pow(x,n), которая возвращает x в степени n.
 // Иначе говоря, умножает x на себя n раз и возвращает результат.
 // pow(3, 2) = 3 * 3 = 9
@@ -46,8 +54,8 @@
 // Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
 // В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
 
-// let x = prompt("Введите число");
-// let n = prompt("Введите степень");
+// let x = +prompt("Введите число");
+// let n = +prompt("Введите степень");
 // function pow(x, n) {
 //   let result = Math.pow(x, n);
 //   return result;
@@ -61,11 +69,24 @@
 // Слова палиндромы. Узнать является ли строка палиндромом.
 // Слово палиндром - может читаться справа-налево и слева-направо одинаково. Прим “шалаш”.
 
-// let str = prompt("Веддите слово");
+// let str = prompt("Введите слово");
 // function showPalindrom(str) {
 // return str === str.split('').reverse().join('');
 // }
 // alert(showPalindrom(str));//Является ли строка полиндромом (true,false)
+
+// Менее ресурсно------------
+
+// let str = prompt("Введите слово");
+// function palindrome(str) {
+//   let cleanStr = str.toLowerCase();
+//   let charArr = [...cleanStr];
+//   for (let char of charArr) {
+//     if (char !== charArr.pop()) return false;
+//   }
+//   return true;
+// }
+// alert(palindrome(str));//Является ли строка полиндромом (true,false)
 
 // -------------------------------------------------------
 // Массив уникальных случайных цифр. Создадим массив для семи элементов;
@@ -96,12 +117,23 @@
 // let arr = [];
 // for (let i = 0; i < 10; i++) {
 //   let random = Math.round(Math.random() * 100);
-//   if (random % 100 === 0){
-//     random = (random/100) + "zerozero";
+//   if (random % 100 === 0) {
+//     random = random / 100 + "zerozero";
+//   } else if (random % 10 === 0) {
+//     random = random / 10 + "zero";
 //   }
-//   else if (random % 10 === 0){
-//       random = (random/10)+"zero";
-//   }
-//   arr.push(random)
+//   arr.push(random);
 // }
 // console.log(arr);
+
+let arr = [''];
+for (let i = 0; i < 10; i++) {
+  let random = Math.round(Math.random() * 100);
+  // for (let i = 0; i < 10; i++ ) {
+    if (i === 0) {
+      let boom = arr.splice(1, 2, "zero");
+      arr.push(boom);
+    } else arr.push(random)
+  // }
+}
+console.log(arr);
