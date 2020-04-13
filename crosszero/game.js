@@ -37,14 +37,24 @@ window.onload = function crossZero() {
         checkblock[arr[i][0]].innerHTML == "X" &&
         checkblock[arr[i][1]].innerHTML == "X" &&
         checkblock[arr[i][2]].innerHTML == "X"
-      )
+      ) {
         alert("WIN CROSS");
-        if (
-          checkblock[arr[i][0]].innerHTML == "O" &&
-          checkblock[arr[i][1]].innerHTML == "O" &&
-          checkblock[arr[i][2]].innerHTML == "O"
-        )
-          alert("WIN ZERO");
+      } else if (
+        checkblock[arr[i][0]].innerHTML == "O" &&
+        checkblock[arr[i][1]].innerHTML == "O" &&
+        checkblock[arr[i][2]].innerHTML == "O"
+      ) {
+        alert("WIN ZERO");
+      } else {
+        let draw = true;
+        for (let i in checkblock) {
+          if (checkblock[i].innerHTML == "") draw = false;
+        }
+        if (draw) {
+          alert("DRAW");
+          break;
+        }
+      }
     }
   }
 };
