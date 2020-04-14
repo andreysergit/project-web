@@ -19,7 +19,6 @@ window.onload = function crossZero() {
       checkWinner();
     }
   });
-
   function checkWinner() {
     let checkblock = document.getElementsByClassName("block");
     let arr = [
