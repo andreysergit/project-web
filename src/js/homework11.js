@@ -1,21 +1,21 @@
 // написать ф-цию заменяющую каждый нечетный эл-т массива на предыдущий четный (если такого эл-та нет, то не изменяем).
 // Используя map
 
-// const arr = [1, 4, 3, 8, 10];
+const arr = [1, 4, 3, 8, 10];
 
-// const arrNew = arr.map((num, index, array) => {
-//   console.log("index", index);
-//   console.log("array", array);
-//   if (array[index] % 2 !== 0 && array[index - 1] % 2 == 0) {
-//     num = array[index - 1];
-//     if ((array[index] = num) && array[index + 1] % 2 == 0) {
-//       num = array[index]
-//     }
-//   }
-//   return num;
-// });
+const arrNew = arr.map((num, index, array) => {
+  console.log("index", index);
+  console.log("array", array);
+  if (array[index] % 2 !== 0 && array[index - 1] % 2 == 0) {
+    num = array[index - 1];
+    if ((array[index] = num) && array[index + 1] % 2 == 0) {
+      num = array[index]
+    }
+  }
+  return num;
+});
 
-// console.log("arrNew", arrNew);
+console.log("arrNew", arrNew);
 
 // написать функцию которая перемножает все отрицательные значения в массиве. Используя reduce
 
