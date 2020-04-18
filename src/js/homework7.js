@@ -5,17 +5,17 @@
 
 // let n = 3;
 // let m = 3;
-// let mas = [];
-// function matrix (n,m){
+// let mas = []; //const
+// function matrix(n, m) {
 //   for (let i = 0; i < m; i++) {
 //     mas[i] = [];
 //     for (let j = 0; j < n; j++) {
-//       let random = Math.round(Math.random() * (100 - (-100)) + (-100));
+//       let random = Math.round(Math.random() * (200 - 100));
 //       mas[i].push(random);
 //     }
 //   }
 // }
-// matrix (n,m)
+// matrix(n, m);
 // console.log(mas);
 
 // Сгенерировать матрицу А(N,M).
@@ -24,17 +24,12 @@
 // let n = 3;
 // let m = 3;
 // let mas = [];
-// let firstRandom = Math.round(Math.random() * (100 - -100) + -100);
-// let max = firstRandom;
+// let max = -101;
 // function matrix(n, m) {
 //   for (let i = 0; i < m; i++) {
 //     mas[i] = [];
 //     for (let j = 0; j < n; j++) {
-//       let random;
-//       if (firstRandom !== null) {
-//         random = firstRandom;
-//         firstRandom = null;
-//       } else random = Math.round(Math.random() * (100 - -100) + -100);
+//       const random = Math.round(Math.random() * 200 - 100);
 //       mas[i].push(random);
 //       if (random > max) max = random;
 //     }
@@ -48,28 +43,28 @@
 // Сгенерировать матрицу А(N,M).
 // Составить программу замены всех отрицательных элементов матрицы на элемент, имеющий максимальное эначение.
 
-// let n = 3;
-// let m = 3;
-// let mas = [];
-// let firstRandom = Math.round(Math.random() * (100 - -100) + -100);
-// let max = firstRandom;
-// function matrix(n, m) {
-//   for (let i = 0; i < m; i++) {
-//     mas[i] = [];
-//     for (let j = 0; j < n; j++) {
-//       let random;
-//       if (firstRandom !== null) {
-//         random = firstRandom;
-//         firstRandom = null;
-//       } else random = Math.round(Math.random() * (100 - -100) + -100);
-//       mas[i].push(random);
-//       if (random > max) max = random;
-//       if (random <0) mas[i] = mas[i].toString().replace(/0/g, max);
-//     }
-//   }
-// }
-// matrix(n, m);
-// console.log(mas, max);
+let n = 3;
+let m = 3;
+let mas = [];
+let firstRandom = Math.round(Math.random() * (100 - -100) + -100);
+let max = firstRandom;
+function matrix(n, m) {
+  for (let i = 0; i < m; i++) {
+    mas[i] = [];
+    for (let j = 0; j < n; j++) {
+      let random;
+      if (firstRandom !== null) {
+        random = firstRandom;
+        firstRandom = null;
+      } else random = Math.round(Math.random() * (100 - -100) + -100);
+      mas[i].push(random);
+      if (random > max) max = random;
+      if (random <0) mas[i] = mas[i].toString().replace(/0/g, max);
+    }
+  }
+}
+matrix(n, m);
+console.log(mas, max);
 
 //------------------------------------------------------------------------------
 
@@ -80,11 +75,9 @@
 // const min = (x,y) => x<y ? x : y;
 // const res = calc(min, 3, 11) // res должно быть равно 3
 
-
-// const min = (x,y) => x<y ? x : y;
-// const res = calc(min, 2, 11)
-// function calc(func, x, y) {
-//   return func(x, y);
-// }
-// console.log (res)
-
+const min = (x,y) => x<y ? x : y;
+const res = calc(min, 2, 11)
+function calc(func, x, y) {
+  return func(x, y);
+}
+console.log (res)

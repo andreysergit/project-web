@@ -126,14 +126,29 @@
 // }
 // console.log(arr);
 
-let arr = [''];
-for (let i = 0; i < 10; i++) {
-  let random = Math.round(Math.random() * 100);
-  // for (let i = 0; i < 10; i++ ) {
-    if (i === 0) {
-      let boom = arr.splice(1, 2, "zero");
-      arr.push(boom);
-    } else arr.push(random)
-  // }
-}
-console.log(arr);
+// let arr = [''];
+// for (let i = 0; i < 10; i++) {
+//   let random = Math.round(Math.random() * 100);
+//     if (i === 0) {
+//       let boom = arr.splice(1, 2, "zero");
+//       arr.push(boom);
+//     } else arr.push(random)
+//   // }
+// }
+// console.log(arr);
+
+// function toZero(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] = arr[i].toString().replace(/0/g, "zero");
+//   }
+//   return arr;
+// }
+
+// let arr = [];
+// for (let i = 0; i < 10; i++) {
+//   let a = Math.round(Math.random() * 1000);
+//   arr.push(a);
+//   console.log (a)
+// }
+// toZero(arr);
+// console.log(arr);

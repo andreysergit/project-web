@@ -296,6 +296,76 @@
 // }
 // show(5)
 
+function getArray(number) {
+  let count = 0;
+  let arr = [];
+  let maxNumber = number;
+
+ ( function getMax(number) {
+    arr.push(number);
+    if (number > maxNumber) maxNumber = number;
+    if (number === 1) return 1;
+    count++;
+    return number % 2 === 0 ? getMax(number / 2) : getMax(number * 3 + 1);
+  })(number)
+  console.log(count, arr, maxNumber);
+}
+getArray(9);
+
+// function random() {
+//   console.log(Math.random())
+//  let a = Math.random() * 10;
+//   console.log(a)
+
+// };
+// random();
+
+// let arr = [];
+// function getRandom(arr) {
+//   let array = [];
+//   for (let i = 0; i < 10; i++) {
+//     let random = Math.round(Math.random() * 10);
+//     array.push(random);
+//   }
+//   console.log(array)
+// }
+// getRandom(arr)
+
+// .Составить программу для решения квадратного уравнения a∗x∗x+b∗x+c=0.
+// function pow(a, b, c) {
+//   let result =  (b * b - (4 * a * c));
+//   if (result > 0) {
+//     let x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+//     let x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+//     console.log(x1);
+//     console.log(x2);
+//   }else if (result === 0) {
+//     let x4 = -b / (2 * a);
+//     console.log(x4);
+//   } else {
+//     console.log("No");
+//   }
+// }
+// // let num = pow(2, 3, 4);
+// pow(2, 1, 4);
+
+// В последовательности целых чисел определить количество положительных чисел и количество элементов, 
+// значения ко- торых находятся в интервале –10 до -20.
+
+// let count = 0;s
+// let bat = 0
+// for (i =10; i>-20; i--){
+//     if (i>0){
+//         count++
+//         bat++
+//     } else {
+//         bat++
+//     }
+// }
+// console.log(count, bat)
+
+
+
 // function getArray(number) {
 //   let count = 0;
 //   let arr = [];
@@ -311,24 +381,3 @@
 //   console.log(count, arr, maxNumber);
 // }
 // getArray(9);
-
-// function random() {
-//   console.log(Math.random())
-//  let a = Math.random() * 10;
-//   console.log(a)
-
-// };
-// random();
-
-
-// let arr = [];
-// function getRandom(arr) {
-//   let array = [];
-//   for (let i = 0; i < 10; i++) {
-//     let random = Math.round(Math.random() * 10);
-//     array.push(random);
-//   }
-//   console.log(array)
-// }
-// getRandom(arr)
-
